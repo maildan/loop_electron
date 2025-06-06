@@ -1,0 +1,805 @@
+{
+  "config": {
+    "configFile": "/Users/user/loop/loop_3_electron/playwright.config.ts",
+    "rootDir": "/Users/user/loop/loop_3_electron/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/user/loop/loop_3_electron/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "electron",
+        "name": "electron",
+        "testDir": "/Users/user/loop/loop_3_electron/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.electron.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/user/loop/loop_3_electron/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/user/loop/loop_3_electron/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.browser.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.52.0",
+    "workers": 5,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "app.electron.spec.ts",
+      "file": "app.electron.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Electron App",
+          "file": "app.electron.spec.ts",
+          "line": 82,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should launch and show main window",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "interrupted",
+                      "duration": 0,
+                      "error": {
+                        "message": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+                        "stack": "Error: page.waitForTimeout: Target page, context or browser has been closed\n    at /Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts:75:21",
+                        "location": {
+                          "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                          "column": 21,
+                          "line": 75
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 73 |\u001b[39m   \n \u001b[90m 74 |\u001b[39m   \u001b[90m// Final wait to ensure everything is stable\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m   \u001b[36mawait\u001b[39m firstWindow\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m\n \u001b[90m 78 |\u001b[39m test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                            "column": 21,
+                            "line": 75
+                          },
+                          "message": "Error: page.waitForTimeout: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 73 |\u001b[39m   \n \u001b[90m 74 |\u001b[39m   \u001b[90m// Final wait to ensure everything is stable\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m   \u001b[36mawait\u001b[39m firstWindow\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m\n \u001b[90m 78 |\u001b[39m test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts:75:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Attempt 1: Current URL is http://localhost:3002/\n"
+                        },
+                        {
+                          "text": "Content not found, but continuing anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:12.575Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                        "column": 21,
+                        "line": 75
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-d0626489464bbf5f75f9",
+              "file": "app.electron.spec.ts",
+              "line": 83,
+              "column": 7
+            },
+            {
+              "title": "should have correct window dimensions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.556Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-f5f0ebe3c26917d554cd",
+              "file": "app.electron.spec.ts",
+              "line": 106,
+              "column": 7
+            },
+            {
+              "title": "should load the main navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.556Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-07eb771f0e3f594aa801",
+              "file": "app.electron.spec.ts",
+              "line": 137,
+              "column": 7
+            },
+            {
+              "title": "should navigate between tabs",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.556Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-3d03f79663a6763dd349",
+              "file": "app.electron.spec.ts",
+              "line": 156,
+              "column": 7
+            },
+            {
+              "title": "should show typing statistics on dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "interrupted",
+                      "duration": 0,
+                      "error": {
+                        "message": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+                        "stack": "Error: page.waitForTimeout: Target page, context or browser has been closed\n    at /Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts:75:21",
+                        "location": {
+                          "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                          "column": 21,
+                          "line": 75
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 73 |\u001b[39m   \n \u001b[90m 74 |\u001b[39m   \u001b[90m// Final wait to ensure everything is stable\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m   \u001b[36mawait\u001b[39m firstWindow\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m\n \u001b[90m 78 |\u001b[39m test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                            "column": 21,
+                            "line": 75
+                          },
+                          "message": "Error: page.waitForTimeout: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 73 |\u001b[39m   \n \u001b[90m 74 |\u001b[39m   \u001b[90m// Final wait to ensure everything is stable\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m   \u001b[36mawait\u001b[39m firstWindow\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m\n \u001b[90m 78 |\u001b[39m test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts:75:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Attempt 1: Current URL is http://localhost:3002/\n"
+                        },
+                        {
+                          "text": "Content not found, but continuing anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:12.596Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                        "column": 21,
+                        "line": 75
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-d577199f3a047993b70a",
+              "file": "app.electron.spec.ts",
+              "line": 172,
+              "column": 7
+            },
+            {
+              "title": "should open settings panel",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.559Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-cda845f75e43d22d878a",
+              "file": "app.electron.spec.ts",
+              "line": 184,
+              "column": 7
+            },
+            {
+              "title": "should handle theme switching",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.559Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-4dbcd9cf7b3c16273c0a",
+              "file": "app.electron.spec.ts",
+              "line": 198,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Typing Test",
+          "file": "app.electron.spec.ts",
+          "line": 216,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display typing text",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.559Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-cf4708f1d8a74ceba468",
+              "file": "app.electron.spec.ts",
+              "line": 223,
+              "column": 7
+            },
+            {
+              "title": "should show typing statistics",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "interrupted",
+                      "duration": 0,
+                      "error": {
+                        "message": "Error: page.waitForTimeout: Application exited",
+                        "stack": "Error: page.waitForTimeout: Application exited\n    at /Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts:75:21",
+                        "location": {
+                          "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                          "column": 21,
+                          "line": 75
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 73 |\u001b[39m   \n \u001b[90m 74 |\u001b[39m   \u001b[90m// Final wait to ensure everything is stable\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m   \u001b[36mawait\u001b[39m firstWindow\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m\n \u001b[90m 78 |\u001b[39m test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                            "column": 21,
+                            "line": 75
+                          },
+                          "message": "Error: page.waitForTimeout: Application exited\n\n\u001b[0m \u001b[90m 73 |\u001b[39m   \n \u001b[90m 74 |\u001b[39m   \u001b[90m// Final wait to ensure everything is stable\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m   \u001b[36mawait\u001b[39m firstWindow\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m\n \u001b[90m 78 |\u001b[39m test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts:75:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Attempt 1: Current URL is http://localhost:3002/\n"
+                        },
+                        {
+                          "text": "Content not found, but continuing anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:12.575Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                        "column": 21,
+                        "line": 75
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-f48805e10c5fdb91e157",
+              "file": "app.electron.spec.ts",
+              "line": 231,
+              "column": 7
+            },
+            {
+              "title": "should start typing test on key press",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.546Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-1874ca762e8da21459b7",
+              "file": "app.electron.spec.ts",
+              "line": 242,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Database Operations",
+          "file": "app.electron.spec.ts",
+          "line": 258,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should handle database initialization",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.546Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-f6918d8961d7a2be9ffe",
+              "file": "app.electron.spec.ts",
+              "line": 259,
+              "column": 7
+            },
+            {
+              "title": "should save typing session data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.547Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-d4ce1a8f39c57b3a20f7",
+              "file": "app.electron.spec.ts",
+              "line": 269,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "System Integration",
+          "file": "app.electron.spec.ts",
+          "line": 290,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should show system information in settings",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "interrupted",
+                      "duration": 0,
+                      "error": {
+                        "message": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+                        "stack": "Error: page.waitForTimeout: Target page, context or browser has been closed\n    at /Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts:75:21",
+                        "location": {
+                          "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                          "column": 21,
+                          "line": 75
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 73 |\u001b[39m   \n \u001b[90m 74 |\u001b[39m   \u001b[90m// Final wait to ensure everything is stable\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m   \u001b[36mawait\u001b[39m firstWindow\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m\n \u001b[90m 78 |\u001b[39m test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                            "column": 21,
+                            "line": 75
+                          },
+                          "message": "Error: page.waitForTimeout: Target page, context or browser has been closed\n\n\u001b[0m \u001b[90m 73 |\u001b[39m   \n \u001b[90m 74 |\u001b[39m   \u001b[90m// Final wait to ensure everything is stable\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m   \u001b[36mawait\u001b[39m firstWindow\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m\n \u001b[90m 78 |\u001b[39m test\u001b[33m.\u001b[39mafterAll(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at /Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts:75:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "Attempt 1: Current URL is http://localhost:3002/\n"
+                        },
+                        {
+                          "text": "Content not found, but continuing anyway...\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:12.587Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/user/loop/loop_3_electron/tests/e2e/app.electron.spec.ts",
+                        "column": 21,
+                        "line": 75
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-87d45be9b5e2a4450f53",
+              "file": "app.electron.spec.ts",
+              "line": 291,
+              "column": 7
+            },
+            {
+              "title": "should handle window controls",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.548Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-e015c0919e93bb37ba52",
+              "file": "app.electron.spec.ts",
+              "line": 303,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Performance",
+          "file": "app.electron.spec.ts",
+          "line": 313,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load within reasonable time",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.548Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-f1183ce22b7d4a4f936e",
+              "file": "app.electron.spec.ts",
+              "line": 314,
+              "column": 7
+            },
+            {
+              "title": "should handle large dataset visualization",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "electron",
+                  "projectName": "electron",
+                  "results": [
+                    {
+                      "workerIndex": -1,
+                      "parallelIndex": -1,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-06-06T03:04:24.549Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "97870af7560569ed5409-5c36760a3f0a63db2ca0",
+              "file": "app.electron.spec.ts",
+              "line": 331,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-06-06T03:04:11.836Z",
+    "duration": 12737.304,
+    "expected": 0,
+    "skipped": 16,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,42 @@
+[package]
+name = "loop-native"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = { version = "2.15", default-features = false, features = ["napi8", "tokio_rt"] }
+napi-derive = "2.15"
+tokio = { version = "1.35", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rayon = "1.8"
+memmap2 = "0.9"
+byteorder = "1.5"
+log = "0.4"
+env_logger = "0.10"
+num_cpus = "1.16"
+
+# GPU acceleration dependencies
+wgpu = { version = "0.20", features = ["spirv"] }
+pollster = "0.3"
+
+# Memory optimization
+jemallocator = "0.5"
+jemalloc-sys = "0.5"
+libc = "0.2"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-foundation = "0.9"
+core-graphics = "0.23"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "processthreadsapi", "psapi"] }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2"
+
+[build-dependencies]
+napi-build = "2.1"

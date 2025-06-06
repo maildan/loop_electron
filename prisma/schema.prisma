@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model TypingLog {
+  id              String   @id @default(cuid())
+  sessionId       String
+  timestamp       DateTime @default(now())
+  keystroke       String
+  timeBetweenKeys Int // milliseconds
+  applicationName String?
+  windowTitle     String?
+  wpm             Float?
+  accuracy        Float?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("typing_logs")
+}
+
+model TypingStats {
+  id              String   @id @default(cuid())
+  sessionId       String   @unique
+  userId          String?
+  startTime       DateTime
+  endTime         DateTime?
+  totalKeystrokes Int      @default(0)
+  totalTime       Int      @default(0) // seconds
+  wpm             Float    @default(0)
+  accuracy        Float    @default(0)
+  errorCount      Int      @default(0)
+  correctionCount Int      @default(0)
+  applicationName String?
+  notes           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("typing_stats")
+}
+
+model UserSettings {
+  id                    String   @id @default(cuid())
+  userId                String   @unique
+  theme                 String   @default("system")
+  enableNotifications   Boolean  @default(true)
+  enableAutoSave        Boolean  @default(true)
+  trackingEnabled       Boolean  @default(true)
+  monitorAllApps        Boolean  @default(false)
+  excludedApplications  String?  // JSON array
+  keyboardShortcuts     String?  // JSON object
+  dataRetentionDays     Int      @default(30)
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  @@map("user_settings")
+}
+
+model SystemInfo {
+  id          String   @id @default(cuid())
+  osType      String
+  osVersion   String
+  hostname    String
+  cpuModel    String
+  totalMemory BigInt
+  recordedAt  DateTime @default(now())
+
+  @@map("system_info")
+}
